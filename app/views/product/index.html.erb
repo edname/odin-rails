@@ -1,0 +1,11 @@
+<h1>Shop</h1>
+
+<ul>
+    <% @products.each do |product| %>
+        <li>
+            <a href="/shop/<%= product.id %>"><p><%= product.title %></p></a>
+            <p><%= product.body %></p>
+            <p>Kaina: <%= product.price %>€</p>
+        </li>
+    <% end %>
+</ul>
