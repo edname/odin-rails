@@ -1,12 +1,17 @@
 
+
 <h2><%= @article.title %></h2>
 <p><%= @article.body %></p>
+<p><%= link_to "Redaguoti", edit_article_path(@article) %> | <%= link_to "Trinti", article_path(@article), method: :delete, data: {confirm: "Ar tikrai norite ištrinti?"} %></p>
 
-<ul>
-    <li><%= link_to "Redaguoti", edit_article_path(@article) %></li>
-    <li><%= link_to "Trinti", article_path(@article), method: :delete, data: {confirm: "Ar tikrai norite ištrinti?"} %></li>
-</ul>
+<hr>
 
-
+<h3>Komentarai</h3>
 <%= render @article.comments %>
+
+<hr>
+
+<h3>Rašyti komentarą:</h3>
 <%= render 'comments/form' %>
+
+<hr>
