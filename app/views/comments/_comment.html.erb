@@ -1,0 +1,8 @@
+
+<h3>Komentarai</h3>
+
+<% @article.comments.each do |comment| %>
+    <p>
+        <%= comment.commenter %><strong> - </strong><%= comment.body %> - <%= link_to 'Ištrinti', [comment.article, comment], method: :delete, data: { confirm: "Ar tikrai norite ištrinti?"} %>
+    </p>
+<% end %>
