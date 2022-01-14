@@ -1,5 +1,10 @@
 <h1>Įrašai <strong><%= Article.public_count %></strong></h1>
 
+<%= form_tag :method => "get" do %>
+    <%= label_tag(:search, "Ieskome irasu:") %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag("Search", :title => nil) %>
+<% end %>
 
 <ul>
 <% @articles.each do |article| %>

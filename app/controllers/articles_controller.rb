@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
 http_basic_authenticate_with name: "e", password: "e", except:[:index, :show, :new, :create]
 
   def index
-    @articles = Article.all
+    @articles = Article.search(params[:search])
   end
 
   def show
@@ -48,6 +48,6 @@ http_basic_authenticate_with name: "e", password: "e", except:[:index, :show, :n
 
   private
     def article_params
-      params.require(:article).permit(:title, :body, :status)
+      params.require(:article).permit(:title, :body, :status, :search)
     end
 end

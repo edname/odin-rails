@@ -1,0 +1,34 @@
+/* 
+original boder green color
+background: #75fe04;  
+*/ 
+
+body::before {
+    background: white;
+    content: "";
+    display: block;
+    height: .75rem;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+body::after {
+    background: white;
+    content: "";
+    display: block;
+    height: .75rem;
+    pointer-events: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+body{
+    background-color: #fff6f3;
+}
