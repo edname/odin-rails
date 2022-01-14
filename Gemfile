@@ -14,6 +14,9 @@ group :production do
   gem 'pg'
 end
 
+gem 'image_processing', '~> 1.2'
+
+
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
